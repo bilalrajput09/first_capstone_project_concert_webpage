@@ -17,37 +17,77 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 
-# 📖 [Set-up-mobile-first-portfolio] <a name="about-project"></a>
+# 📖 [Nescafe Basement Show] <a name="about-project"></a>
 
-**[Set-up-mobile-first-portfolio]** is a project in which we use our knowledge about html and css and we will add linters to make sure the code is clean.
+**[Nescafe Basement Show Website]** Nescafe Basement is a Pakistani music television series and platform that showcases emerging and established musical talent from the country. The show features live performances and covers of both and original songs across various genres, and aims to provide a platform for artists to showcase their skill and gain wider recognition.
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With HTML CSS and Javscript <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-I used VS code to create the project and files needed plus used Git and GitHub to complete the tasks. I used templates as well as flexbox for layout plus css grid layout. For mobile menu we have used javascript to give html some dynamic features.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="">N/A</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="">N/A</a></li>
+  </ul>
+</details>
 
 ### Key Features <a name="key-features"></a>
 
-- **[It will show my portfolio website made by using css and html.]**
-
-- **[For Mobile : And when you will click on menu button the menu will appear]**
+- **It shows html css and javascript skills of developer.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-https://bilalrajput09.github.io/My-Portfolio/
+- [Live Demo](https://bilalrajput09.github.io/My-Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Screenshot <a name="screenshot"></a>
+
+![image](./assets/project%20screenshot.png)
+
+## 💻 Loom Presentation Video <a name="loom-video"></a>
+
+- [Loom Link](https://www.loom.com/share/bbd9761db353491d9a966b74a281e55d)
+
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
-It will show my sample portfolio mobile site.
+To get a local copy up and running, follow these steps.
 
-## Prerequisites
+### Prerequisites
 
-In order to run this project you need to clone the repo using [git clone here](https://github.com/bilalrajput09/My-Portfolio.git) git bash and run the html file in browser using VS code.
+In order to run this project you need:
+-A Computer (MAC or PC)
+-code editor (VSCode,Atom etc...)
+-A browser (Chrome,Mozilla,Safari etc...)
+-Version Control System (Git and Github)
+
+### Setup
+
+Clone this repository to your desired folder:
+
+cd my-folder
+git clone https://github.com/bilalrajput09/first_capstone_project_concert_webpage.git
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,11 +105,11 @@ Bilal Ahmed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Search Bar]**
-- [ ] **[ Forms ]**
-- [ ] **[Professional Layout]**
-- [ ] **[Desktop Version]**
-- [ ] **[Mobile Menu]**
+- [ ] **[Dynamic Features]**
+- [ ] **[Transitions Using CSS]**
+- [ ] **[Animations Features]**
+- [ ] **[More User Friendly]**
+- [ ] **[Backend Properties]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,8 +129,8 @@ Look at what I did !! Your support matters a lot
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for giving us the chance to build a better world.
-I would like to appreciate my team members.
+---> I express my gratitude to the Microverse team for granting us the opportunity to collaborate on this project. <br>
+---> The design concept featured in this project originates from <a href="https://www.behance.net/adagio07">Cindy Shin in Behance".</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
