@@ -4,26 +4,33 @@ const featuredCards = [
   {
     img: './assets/photo-1.jpg',
     fullName: 'Nusrat Fateh Ali Khan',
-    profession: 'Music Producer/ Composer/ Associate Music Professor at Harvard.',
-    description: 'Very Talented and Versatile producer. Recieved the Best Gospel Music Award in 2022.',
+    profession:
+      'Music Producer/ Composer/ Associate Music Professor at Harvard.',
+    description:
+      'Very Talented and Versatile producer. Recieved the Best Gospel Music Award in 2022.',
   },
   {
     img: './assets/photo-2.jpg',
     fullName: 'Leo Twin',
-    profession: 'Arranger and songwriter/ Bassist/ Music Director At Punjab University.',
-    description: 'VVery Talented, an elite Keyboardist and Bassist. Renowned for his tastful bass lines.',
+    profession:
+      'Arranger and songwriter/ Bassist/ Music Director At Punjab University.',
+    description:
+      'VVery Talented, an elite Keyboardist and Bassist. Renowned for his tastful bass lines.',
   },
   {
     img: './assets/photo-3.jpg',
     fullName: 'Bloch Brothers',
-    profession: 'Arranger and songwriter/ Saxophonist/ Vocal and Choral Director Berklee.',
-    description: 'Recieved Singer and Artist of the year Award in GMA Awards 2020.',
+    profession:
+      'Arranger and songwriter/ Saxophonist/ Vocal and Choral Director Berklee.',
+    description:
+      'Recieved Singer and Artist of the year Award in GMA Awards 2020.',
   },
   {
     img: './assets/photo-4.jpg',
     fullName: 'Bilal Ahmed',
     profession: 'Music Producer/Music Director at Sydney University.',
-    description: 'Enjoys Music and Perfecting his craft. Widely known for his choral Arrangements and Reharms!',
+    description:
+      'Enjoys Music and Perfecting his craft. Widely known for his choral Arrangements and Reharms!',
   },
   {
     img: './assets/photo-5.jpg',
@@ -37,7 +44,6 @@ const featuredCards = [
     profession: 'Youtube Streamer / Gamer',
     description: 'Known for his Problem solving mind, an Elite Gamer.',
   },
-
 ];
 
 featuredCards.forEach((featureCard) => {
@@ -67,26 +73,78 @@ const hamburger = document.querySelector('.fa-bars');
 const menu = document.createElement('div');
 menu.classList.add('menu');
 menu.classList.add('hide');
-menu.innerHTML = `<div class="cross">
-            <i class="fas fa-times"></i>
-        </div>
-        <div class="pages">
-            <a href="index.html" class="page_items" onclick="closeMenu()">Home</a>
-            <a href="about.html" class="page_items" onclick="closeMenu()">About</a>
-            <a href="#" class="page_items" onclick="closeMenu()">Program</a>
-            <a href="#" class="page_items" onclick="closeMenu()">Join</a>
-            <a href="#" class="page_items" onclick="closeMenu()">Sponsor</a>
-            <a href="#" class="page_items" onclick="closeMenu()">News</a>
-        </div>`;
+const pages = [
+  {
+    href: 'index.html',
+    label: 'Home',
+  },
+  {
+    href: 'about.html',
+    label: 'About',
+  },
+  {
+    href: '#',
+    label: 'Program',
+  },
+  {
+    href: '#',
+    label: 'Join',
+  },
+  {
+    href: '#',
+    label: 'Sponsor',
+  },
+  {
+    href: '#',
+    label: 'News',
+  },
+];
+
+const pagesHtml = pages
+  .map(
+    ({ href, label }) => `
+<a href = "${href}" class= "page_items" onclick = "closeMenu()">${label}</a>
+`
+  )
+  .join('');
+menu.classList.add('menu', 'hide');
+menu.innerHTML = `
+  <div class = "cross">
+  <i class="fas fa-times"></i>
+  </div>
+  <div class = "pages">
+  ${pagesHtml}
+  </div>
+  `;
 document.body.appendChild(menu);
-const closeBtn = document.querySelector('.fa-times');
 
-function showMenu() {
-  return menu.classList.remove('hide');
-}
-function closeMenu() {
-  return menu.classList.add('hide');
+function toggleMenu() {
+  menu.classList.toggle('hide');
 }
 
-hamburger.addEventListener('click', showMenu);
-closeBtn.addEventListener('click', closeMenu);
+hamburger.addEventListener('click', toggleMenu);
+menu.querySelector('.fa-times').addEventListener('click', toggleMenu);
+
+// menu.innerHTML = `<div class="cross">
+//             <i class="fas fa-times"></i>
+//         </div>
+//         <div class="pages">
+//             <a href="index.html" class="page_items" onclick="closeMenu()">Home</a>
+//             <a href="about.html" class="page_items" onclick="closeMenu()">About</a>
+//             <a href="#" class="page_items" onclick="closeMenu()">Program</a>
+//             <a href="#" class="page_items" onclick="closeMenu()">Join</a>
+//             <a href="#" class="page_items" onclick="closeMenu()">Sponsor</a>
+//             <a href="#" class="page_items" onclick="closeMenu()">News</a>
+//         </div>`;
+// document.body.appendChild(menu);
+// const closeBtn = document.querySelector('.fa-times');
+
+// function showMenu() {
+//   return menu.classList.remove('hide');
+// }
+// function closeMenu() {
+//   return menu.classList.add('hide');
+// }
+
+// hamburger.addEventListener('click', showMenu);
+// closeBtn.addEventListener('click', closeMenu);
