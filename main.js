@@ -46,11 +46,12 @@ const featuredCards = [
   },
 ];
 
-featuredCards.forEach((featureCard) => {
+function createDynamicCard(featureCard) {
   const dynamicCardItem = document.createElement('div');
   dynamicCardItem.classList.add('dynamic_card_item');
+
   dynamicCardItem.innerHTML = `
-    <img src="${featureCard.img}" alt="">
+      <img src="${featureCard.img}" alt="">
         <div class="dynamic_card_description">
             <h2 class="full_name">
                 ${featureCard.fullName}
@@ -62,8 +63,14 @@ featuredCards.forEach((featureCard) => {
             </div>
             <p class="dynamic_card_details">
                 ${featureCard.description}
-            </p> 
-            `;
+            </p>
+  `;
+  return dynamicCardItem;
+}
+
+featuredCards.forEach((featuredCard) => {
+  const dynamicCardItem = createDynamicCard(featuredCard);
+
   featuredSection.appendChild(dynamicCardItem);
 });
 
@@ -104,7 +111,7 @@ const pagesHtml = pages
   .map(
     ({ href, label }) => `
 <a href = "${href}" class= "page_items" onclick = "closeMenu()">${label}</a>
-`
+`,
   )
   .join('');
 menu.classList.add('menu', 'hide');
@@ -124,27 +131,3 @@ function toggleMenu() {
 
 hamburger.addEventListener('click', toggleMenu);
 menu.querySelector('.fa-times').addEventListener('click', toggleMenu);
-
-// menu.innerHTML = `<div class="cross">
-//             <i class="fas fa-times"></i>
-//         </div>
-//         <div class="pages">
-//             <a href="index.html" class="page_items" onclick="closeMenu()">Home</a>
-//             <a href="about.html" class="page_items" onclick="closeMenu()">About</a>
-//             <a href="#" class="page_items" onclick="closeMenu()">Program</a>
-//             <a href="#" class="page_items" onclick="closeMenu()">Join</a>
-//             <a href="#" class="page_items" onclick="closeMenu()">Sponsor</a>
-//             <a href="#" class="page_items" onclick="closeMenu()">News</a>
-//         </div>`;
-// document.body.appendChild(menu);
-// const closeBtn = document.querySelector('.fa-times');
-
-// function showMenu() {
-//   return menu.classList.remove('hide');
-// }
-// function closeMenu() {
-//   return menu.classList.add('hide');
-// }
-
-// hamburger.addEventListener('click', showMenu);
-// closeBtn.addEventListener('click', closeMenu);
