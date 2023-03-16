@@ -66,7 +66,7 @@
 
 ## 💻 Loom Presentation Video <a name="loom-video"></a>
 
-- [Loom Link](https://www.loom.com/share/bbd9761db353491d9a966b74a281e55d)
+- [Loom Link](https://www.loom.com/share/880aaeb1fc634693a3c0a111cceed603)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
